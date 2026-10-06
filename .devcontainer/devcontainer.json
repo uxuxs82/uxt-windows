@@ -2,10 +2,10 @@
     "name": "Windows 11 Pro",
     "service": "windows",
     "containerEnv": {
-        "VERSION": "7u",
+        "VERSION": "win10",
         "RAM_SIZE": "10G",
         "CPU_CORES": "4",
-        "DISK_SIZE": "20G"
+        "DISK_SIZE": "25G"
     },
     "forwardPorts": [
         8006
