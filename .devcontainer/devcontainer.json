@@ -1,19 +1,26 @@
 {
-  "name": "Windows 11 Pro",
-  "service": "windows",
-  "containerEnv": {
-    "VERSION": "11"
-  },
-  "forwardPorts": [8006],
-  "portsAttributes": {
-    "8006": {
-      "label": "Web",
-      "onAutoForward": "notify"
+    "name": "Windows 11 Pro",
+    "service": "windows",
+    "containerEnv": {
+        "VERSION": "11"
+    },
+    "forwardPorts": [
+        8006
+    ],
+    "portsAttributes": {
+        "8006": {
+            "label": "Web",
+            "onAutoForward": "notify"
+        }
+    },
+    "otherPortsAttributes": {
+        "onAutoForward": "ignore"
+    },
+    "dockerComposeFile": "codespaces.yml",
+    "initializeCommand": "docker system prune --all --force",
+    "features": {
+        "ghcr.io/devcontainers/features/sshd:1": {
+            "version": "latest"
+        }
     }
-  },
-  "otherPortsAttributes": {
-    "onAutoForward": "ignore"
-  },
-  "dockerComposeFile": "codespaces.yml",
-  "initializeCommand": "docker system prune --all --force"
 }
